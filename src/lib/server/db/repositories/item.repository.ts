@@ -1,5 +1,8 @@
 import { BaseRepository } from './base.repository';
-import type { Item, ItemComponent, Mode, Prerequisite } from "";
+import type { Item } from "$lib/types/models/Item";
+import type { ItemComponent } from "$lib/types/models/ItemComponent";
+import type { Mode } from "$lib/types/models/Mode";
+import type { Prerequisite } from "$lib/types/models/Prerequisite";
 
 type ItemWithRelations = Item & {
   prerequisites: Prerequisite[];
@@ -27,28 +30,17 @@ type CreateItemInput = {
 };
 
 export class ItemRepository extends BaseRepository {
-  async findAll(): Promise<ItemWithRelations[]> {
-    return this.prisma.item.findMany({
-      include: {
-        prerequisites: true,
-        craftingMaterials: true,
-        craftingModes: true,
-      },
-    });
+  async findAll(): Promise<Item[]> {
+    return this.prisma.item.findMany();
   }
 
-  async findById(id: string): Promise<ItemWithRelations | null> {
+  async findById(id: string): Promise<Item> {
     return this.prisma.item.findUnique({
-      where: { id },
-      include: {
-        prerequisites: true,
-        craftingMaterials: true,
-        craftingModes: true,
-      },
+      where: { id }
     });
   }
 
-  async create(data: CreateItemInput): Promise<ItemWithRelations> {
+  async create(data: CreateItemInput): Promise<Item> {
     const { prerequisiteIds, craftingMaterials, craftingModes, ...itemData } = data;
 
     return this.prisma.item.create({
@@ -72,7 +64,7 @@ export class ItemRepository extends BaseRepository {
     });
   }
 
-  async update(id: string, data: Partial<CreateItemInput>): Promise<ItemWithRelations> {
+  async update(id: string, data: Partial<CreateItemInput>): Promise<Item> {
     const { prerequisiteIds, craftingMaterials, craftingModes, ...itemData } = data;
 
     // First, handle the main item update

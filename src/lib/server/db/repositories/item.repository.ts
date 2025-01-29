@@ -1,5 +1,5 @@
 import { BaseRepository } from './base.repository';
-import type { Item, ItemComponent, Mode, Prerequisite } from '@prisma/client';
+import type { Item, ItemComponent, Mode, Prerequisite } from "";
 
 type ItemWithRelations = Item & {
   prerequisites: Prerequisite[];

@@ -16,35 +16,12 @@ datasource db {
 model Item {
   id                String          @id @default(uuid())
   name              String
-  prerequisites     Prerequisite[]
+  prerequisites     String
   description       String
   marketPrice       Int
   craftingCost      Int
-  craftingMaterials ItemComponent[] @relation("ItemToComponent") // Materials needed to craft this item
-  craftingModes     Modes[]         @relation("ItemToMode")
+  craftingMaterials String
+  craftingModes     String
   maxPerDowntime    Int
   placement String
-  
-}
-
-model ItemComponent {
-  id       String @id @default(uuid())
-  item     Item   @relation("ItemToComponent", fields: [itemId], references: [id])
-  itemId   String
-  quantity Int // How much of this component is needed
-}
-
-model Modes {
-  id       Int    @id @default(autoincrement())
-  name     String
-  unit     String
-  quantity Int
-  item     Item   @relation("ItemToMode", fields: [itemId], references: [id])
-  itemId   String
-}
-
-model Prerequisite {
-  id          String @id @default(uuid())
-  description String
-  items       Item[]
 }

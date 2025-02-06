@@ -1,16 +1,12 @@
-import type { ItemComponent } from "./ItemComponent";
-import type { Mode } from "./Mode";
-import type { Prerequisite } from "./Prerequisite";
-
 export interface Item {
     id: string;
     name: string;
-    prerequisites: Prerequisite[];
+    prerequisites: string;
     description: string;
     marketPrice: number;
     craftingCost: number;
-    craftingMaterials: ItemComponent[];
-    craftingModes: Mode[];
+    craftingMaterials: string;
+    craftingModes: string;
     maxPerDowntime: number;
     placement: string;
   }

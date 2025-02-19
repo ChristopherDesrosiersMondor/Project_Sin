@@ -935,7 +935,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Culture cellulaire (Médicament)",
+    "name": "Culture cellulaire",
     "prerequisites": "Contenant identifié CELL + liquide transparent",
     "descriptions": "Une culture cellulaire est une source universelle de nutriment capable d'être digérée par n'importe qu'elle Biomasse-mère, peu importe sa nature. Elle sert de substitut en cas de manque de biomasse appropriée pour nourrir la culture.",
     "marketPrice": "100",
@@ -952,7 +952,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Biogel (Médicament)",
+    "name": "Biogel",
     "prerequisites": "Contenant identifié BIO + liquide vert",
     "descriptions": "Ce médicament composite stabilise la condition du patient et restaure rapidement les tissus endommagés une fois injecté. Une dose de Biogel soigne instantanément 3 points de vie.",
     "marketPrice": "150",
@@ -969,7 +969,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Bactériophage (Médicament)",
+    "name": "Bactériophage",
     "prerequisites": "Contenant identifié BAC + liquide transparent",
     "descriptions": "Ce médicament est nécessaire pour combattre les maladies et infections d'origine bactériologique les plus rares et les plus sévères qu'un antibiotique ne peut guérir. Il est utilisé pour traiter les conditions de type ''Maladie'' de ce type.",
     "marketPrice": "200",
@@ -1139,7 +1139,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Engram (Drogue)",
+    "name": "Engram",
     "prerequisites": "Contenant identifié ENG + liquide bleu",
     "descriptions": "Cette drogue composite inclut un mélange de neurotransmetteurs et de nanorobots capables de reproduire des sensations et de causer des altérations mémorielles complexes. Une dose d'Engram est capable de créer un souvenir représentant une scène d'une durée totale d'un maximum de 30 minutes. Ces souvenirs peuvent aussi bien prendre la forme d'une conversation que d'une série de ''flashback'' décousus, mais prennent toujours racine dans la mémoire à long terme du sujet. Après 6 heures, l'empreinte laissée par un Engram est indiscernable de celle laissée par un souvenir légitime, mais entre-temps les carcasses des nanorobots peuvent être détectées par une analyse de 5 minutes par un Biologiste. Un Engram peut être créé à partir d'un enregistrement réel ou d'une simulation modélisée virtuellement. Il s'agit d'un effet ''Psychologie : Toxine''. La nature de l'altération mémorielle doit être expliquée hors-jeu, avec l'assistance d'un animateur au besoin. Cette drogue doit être injectée directement dans la nuque du sujet pour prendre effet.",
     "marketPrice": "400",
@@ -1535,7 +1535,7 @@
     "descriptions": "Le cyborg dispose d'émetteurs puissants capables de capter et de relayer de l'information avec précision directement à partir de son interface neurale. Cet émetteur est particulièrement utile pour le Piratage. Le cyborg est capable d'utiliser les effets de la compétence Piratage de combat sans nécessiter de Piratage initial pour accéder aux systèmes de sa cible. Le cyborg est également en mesure d'envoyer une balise de détresse avec sa localisation à des personnes de son choix dans le système, même si le réseau Extranet est compromis.",
     "marketPrice": "1500",
     "costToCraftInCredit": "125",
-    "ressourcesNeeded": "Nanocrystaux (2) + Biometal + Supraconducteur + Rhodium + Logiciel (2)",
+    "ressourcesNeeded": "Nanocrystaux (2) + Biométal + Supraconducteur + Rhodium + Logiciel (2)",
     "craftTimeInMinutes": "30.0",
     "craftTimeInDowntime": "1.0",
     "maxPerDowntime": "1.0",
@@ -1785,12 +1785,29 @@
     "category": "Gestionnaire"
   },
   {
+    "name": "Influence",
+    "prerequisites": "",
+    "descriptions": "Générer par certaines compétences.",
+    "marketPrice": "",
+    "costToCraftInCredit": "",
+    "ressourcesNeeded": "",
+    "craftTimeInMinutes": "",
+    "craftTimeInDowntime": "",
+    "maxPerDowntime": "",
+    "location": "",
+    "malfunction": "",
+    "salary": "",
+    "propDescription": "",
+    "skillNeeded": "",
+    "category": ""
+  },
+  {
     "name": "Relationniste",
     "prerequisites": "",
     "descriptions": "Vous avez accès à un spécialiste des relations publiques qui maintient des contacts en continue avec des individus clés des secteurs d'influence de la colonie. Ce relationniste vous représente et agit en votre nom pour protéger votre image et vos intérêts. Vous bénéficiez d'une action de Downtime supplémentaire pour effectuer des actions de type Défense.",
     "marketPrice": "2000",
     "costToCraftInCredit": "200",
-    "ressourcesNeeded": "Lobbyiste + Auxiliaire + IA + 1 Influence",
+    "ressourcesNeeded": "Lobbyiste + Auxiliaire + IA + Influence (1)",
     "craftTimeInMinutes": "",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -1841,7 +1858,7 @@
     "descriptions": "Vous avez accès à un véhicule et à un conducteur, lesquels facilitent votre accès au transport pour vos actions de type Opération. Vous n'avez pas besoin de dépenser d'influence pour avoir accès à un véhicule personnel OU pour éviter des contrôles d'embarquement (1PI). Vous obtenez aussi la spécialisation d'influence Cargo.",
     "marketPrice": "800",
     "costToCraftInCredit": "250",
-    "ressourcesNeeded": "Auxiliaire (2) + Carburant (2) + Sécurité biométrique",
+    "ressourcesNeeded": "Auxiliaire (2) + Carburant (2) + Sécurité Biométrique",
     "craftTimeInMinutes": "20.0",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -1994,7 +2011,7 @@
     "descriptions": "La navette est équipée d'une extension cargo lui permettant de transporter des volumes importants de marchandise, similaire à un conteneur. Cet espace de stockage permet également de libérer de l'espace dans le cockpit de la navette et ainsi de transporter 1 passager supplémentaire.",
     "marketPrice": "2000",
     "costToCraftInCredit": "200",
-    "ressourcesNeeded": "Sécurité Biométrique, Plastoïde, Superalliage (3), Nanotubes (3), Tungstène (3)",
+    "ressourcesNeeded": "Sécurité Biométrique + Plastoïde + Superalliage (3) + Nanotubes (3) + Tungstène (3)",
     "craftTimeInMinutes": "",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2011,7 +2028,7 @@
     "descriptions": "La navette est équipée de systèmes de combat polyvalents conçus pour les transports de troupes et autres vaisseaux de soutien. La navette est munie de contre-mesures antimissiles, d'un bouclier léger, de missiles à fragmentation et d'une batterie d'armes automatiques conçue pour les tirs de suppression et les combats spatiaux. La navette peut transporter respectivement deux contre-mesures et deux missiles (lesquels sont rechargés sans frais entre les événements). D'autres types de missiles peuvent également être installés par le pilote s'il en a en sa possession. Cette amélioration de navette peut influencer le déroulement d'action de type Opération en Downtime, de même que des missions en navette pendant l'événement.",
     "marketPrice": "2500",
     "costToCraftInCredit": "80",
-    "ressourcesNeeded": "Générateur de bouclier lourd, Logiciel, Missile à fragmentation, Grenade magnétisée, Carburant (3), Munitions anti-matérielles (2x6)",
+    "ressourcesNeeded": "Générateur de bouclier lourd + Logiciel + Missile à fragmentation + Grenade magnétisée + Carburant (3) + Munitions antimatérielles (6) (2)",
     "craftTimeInMinutes": "",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2028,7 +2045,7 @@
     "descriptions": "La navette est munie d'une sonde d'exploration télécommandée pouvant être utilisée pour explorer un site sans quitter la sécurité du cockpit. La sonde est de la taille d'un ballon et est capable de transmettre son et image en temps réel. Elle est aussi munie d'appendices capables de manipulations simples (ouvrir une porte, entrer un mot de passe, ramasser un objet ou collecter un échantillon). La sonde doit demeurer dans un rayon de 1 kilomètre de la navette pour fonctionner adéquatement.",
     "marketPrice": "750",
     "costToCraftInCredit": "50",
-    "ressourcesNeeded": "Batterie, Logiciel (2), Plastoïde (2)",
+    "ressourcesNeeded": "Batterie + Logiciel (2) + Plastoïde (2)",
     "craftTimeInMinutes": "20.0",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2045,7 +2062,7 @@
     "descriptions": "La navette spatiale dispose d'un système d'arrimage capable de s'attacher à un vaisseau ou station spatiale et de créer une porte improvisée dans la carlingue. Cette amélioration sert surtout à aborder des vaisseaux et installations de façon hostile, puisqu'elle cause de dommages significatifs. Le trou ainsi formé demeure étanche au vide spatial tant que la navette reste en place.",
     "marketPrice": "1250",
     "costToCraftInCredit": "100",
-    "ressourcesNeeded": "Bombe thermique, Grenade collante, Superalliage",
+    "ressourcesNeeded": "Bombe thermique + Grenade collante + Superalliage",
     "craftTimeInMinutes": "",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2079,7 +2096,7 @@
     "descriptions": "La navette est munie de capteurs scientifiques capables de communiquer des données de base au pilote concernant un site donné. Les informations communiquées avisent l'équipage si le site comporte des caractéristiques extrêmes (gravité, température, pression atmosphérique), s'il y a des émanations radioactives, si l'air est respirable et s'il y a présence de champs électromagnétiques ou de signatures biologiques dans la zone. La pilote doit survoler le site afin de faire usage des capteurs.",
     "marketPrice": "1100",
     "costToCraftInCredit": "200",
-    "ressourcesNeeded": "Analyseur de paquet, Platine, Logiciel (3), Rhodium (4), Prométhium (4)",
+    "ressourcesNeeded": "Analyseur de paquet + Platine + Logiciel (3) + Rhodium (4) + Prométhium (4)",
     "craftTimeInMinutes": "30.0",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2130,7 +2147,7 @@
     "descriptions": "L'employé est en possession d'une serre, d'un bassin microbiologique ou d'une ferme d'insecte capable de produire des denrées alimentaires. Entre les événements, toute Biomasse-fille en possession du propriétaire d'un agromodule peut être utilisée comme fertilisant pour générer des crédits pour un ratio de (1:60c), cet échange requiert une action de Downtime. Si l'employé possède aussi la compétence Commerce, l'échange peut être effectué dans le même action et le ratio est alors de (1:70c). Si le propriétaire travaille pour Kanopi Alliance, il est alternativement possible d'échanger des biomasses-filles pour des points d'influence pour un ratio de 12:1 (ou 10:1 avec Commerce). Un agromodule peut également être attaché à une Habitation pour en recycler les déchets organiques et la rendre autosuffisante en oxygène et en nourriture, permettant d'y abriter des résidents en autarcie pour de longues durées.",
     "marketPrice": "1000",
     "costToCraftInCredit": "60",
-    "ressourcesNeeded": "Culture cellulaire, Batterie, Solution nutritive, Thermoplastique, Nanotubes (2), Biomasse (2)",
+    "ressourcesNeeded": "Culture cellulaire + Batterie + Solution nutritive + Thermoplastique + Nanotubes (2) + Biomasse (2)",
     "craftTimeInMinutes": "",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2147,7 +2164,7 @@
     "descriptions": "L'employé dispose d'une unité d'habitation privée confortable sur la colonie ou au sein de la station orbitale. Lors de l'acquisition de cette habitation, l'individu peut décider d'en faire un usage personnel ou de la louer pour générer des revenus. Une habitation génère 250 crédits au début de chaque événement en revenus locatifs. Si l'habitation est occupée par son propriétaire, il lui est alors possible de l'utiliser pour recevoir des événements privés, héberger un allié ou organiser des rencontres mondaines lors d'Opérations sans nécessité la dépense en points d'Influence normalement requise pour sécuriser un tel lieu. Un maximum de 2 personnes peuvent habiter une unité d'habitation.",
     "marketPrice": "1250",
     "costToCraftInCredit": "200",
-    "ressourcesNeeded": "Nanotubes, Logiciel (2), Biomasse (3), Yttrium (4), Thermoplastique (6)",
+    "ressourcesNeeded": "Nanotubes + Logiciel (2) + Biomasse (3) + Yttrium (4) + Thermoplastique (6)",
     "craftTimeInMinutes": "",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2164,7 +2181,7 @@
     "descriptions": "L'habitation de l'employé est protégée par des systèmes d'alarme et des sécurités biométriques élaborées, en faisant un refuge sécuritaire. Advenant une Opération hostile ciblant le lieu, le propriétaire et ses invités seront minimalement en mesure de réagir à la menace, assumant que cette dernière n'est pas simplement écartée par les systèmes de sécurité.",
     "marketPrice": "750",
     "costToCraftInCredit": "50",
-    "ressourcesNeeded": "Système d'alerte, Logiciel (3), Yttrium",
+    "ressourcesNeeded": "Système d'alerte + Logiciel (3) + Yttrium",
     "craftTimeInMinutes": "",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2181,7 +2198,7 @@
     "descriptions": "L'employé dispose d'un serveur personnel lui permettant de concevoir son propre environnement de réalité virtuelle, lequel peut être utilisé pour héberger des rencontres privées lors d'actions de type Opération. Un serveur peut également servir à effectuer des simulations en série afin de déterminer les probabilités d'un événement donné. Il est possible au propriétaire d'un serveur d'utiliser une action de Downtime pour consulter et analyser ces simulations. Le joueur peut alors envoyer à l'équipe d'animation un questionnement ou un scénario dont il souhaite tester les variables et la probabilité.",
     "marketPrice": "1500",
     "costToCraftInCredit": "150",
-    "ressourcesNeeded": "IA, Plastoïde, Supraconducteur, Rectification Dynamique",
+    "ressourcesNeeded": "IA + Plastoïde + Supraconducteur + Rectification Dynamique",
     "craftTimeInMinutes": "",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2198,7 +2215,7 @@
     "descriptions": "L'employé dispose d'une petite usine automatisée programmable pour différentes tâches de production, qu'il s'agisse de biens manufacturés, de produits pharmaceutiques ou même de copies de logiciels. Le propriétaire dispose d'une action de Downtime bonus réservée à la fabrication d'équipement et peut multipler par 3 la quantité maximum d'objets permise par action de Downtime pour la fabrication d'équipement. Il est toutefois toujours nécessaire de dépenser plusieurs actions pour fabriquer des objets différents. Le multiplicateur ne s'applique pas aux augmentations, améliorations d'augmentation et à l'équipement qui peut uniquement être fabriqué au coût d'1 action de Downtime. Maximum de 1 module par personnage.",
     "marketPrice": "3000",
     "costToCraftInCredit": "200",
-    "ressourcesNeeded": "Robot : Industriel, Logiciel",
+    "ressourcesNeeded": "Robot : Industriel + Logiciel",
     "craftTimeInMinutes": "",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2215,7 +2232,7 @@
     "descriptions": "L'employé est en contrôle d'un entrepôt de marchandise sécurisé en orbite ou sur Horizon-C. Cet entrepôt augmente de 500 crédits la limite totale d'achat pouvant être effectué par utilisation de la compétence Fournisseur. Cet entrepot peut également servir dans le contexte d'une action d'Opération pour entreposer des biens ou les mettre en sûreté sans nécessiter de dépense de points d'Influence.",
     "marketPrice": "850",
     "costToCraftInCredit": "150",
-    "ressourcesNeeded": "Sécurité Biométrique, Logiciel, Plastoïde, Platine (2), Tungstène (5)",
+    "ressourcesNeeded": "Sécurité Biométrique + Logiciel + Plastoïde + Platine (2) + Tungstène (5)",
     "craftTimeInMinutes": "",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2232,7 +2249,7 @@
     "descriptions": "L'employé dispose d'une plateforme mobile d'excavation automatisée capable d'exploiter des gisements de minerais et de raffiner la matière première. Un escavateur peut être déployé dans le système Horizon selon les modalités du Sous-système de Géologie afin de générer 60 crédits de valeur de minerais par heure de travail. Tous les géologues ont accès à un excavateur de base, mais peuvent acquérir de la machinerie additionnelle pour augmenter leur production de minerais.",
     "marketPrice": "3000",
     "costToCraftInCredit": "100",
-    "ressourcesNeeded": "Robot : Industriel, Prométhium, Rhodium (3)",
+    "ressourcesNeeded": "Robot : Industriel + Prométhium + Rhodium (3)",
     "craftTimeInMinutes": "",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2878,7 +2895,7 @@
     "descriptions": "",
     "marketPrice": "1500",
     "costToCraftInCredit": "350",
-    "ressourcesNeeded": "Yttrium (7) + Platine (10) + Béryllium (5) + Uranium (5)",
+    "ressourcesNeeded": "Yttrium (7) + Platine (10) + Beryllium (5) + Uranium (5)",
     "craftTimeInMinutes": "20.0",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -2946,7 +2963,7 @@
     "descriptions": "",
     "marketPrice": "2500",
     "costToCraftInCredit": "285",
-    "ressourcesNeeded": "Superalliage (4) + Supraconducteur (3) + Iridum (2) + Plastoïde",
+    "ressourcesNeeded": "Superalliage (4) + Supraconducteur (3) + Iridium (2) + Plastoïde",
     "craftTimeInMinutes": "45.0",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -3009,7 +3026,7 @@
     "category": "Mécatronique"
   },
   {
-    "name": "Antibiotique (Médicament)",
+    "name": "Antibiotique",
     "prerequisites": "Contenant identifié* AB + pilule",
     "descriptions": "Ce médicament est nécessaire pour combattre les maladies et infections d'origine bactériologique. Il est utilisé pour traiter les conditions ''Maladie'' de ce type.",
     "marketPrice": "100",
@@ -3026,7 +3043,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Antiviral (Médicament)",
+    "name": "Antiviral",
     "prerequisites": "Contenant identifié* AV + pilule",
     "descriptions": "Ce médicament est nécessaire pour combattre les maladies et infections d'origine virale. Il est utilisé pour traiter les conditions ''Maladie'' de ce type.",
     "marketPrice": "100",
@@ -3043,7 +3060,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Immunosuppresseur (Médicament)",
+    "name": "Immunosuppresseur",
     "prerequisites": "Contenant identifié* IM + pilule",
     "descriptions": "Ce médicament est nécessaire aux cyborgs pour combattre le rejet de leurs implants cybernétiques, et peut également servir en cas de greffe ou pour traiter certaines maladies auto-immunes. Un cyborg doit consommer 1 dose d'immunosuppresseur par cycle sans quoi il gagne une condition de type ''Santé : Rejet'' liée au rejet de ses implants. Ce malus est cumulable.",
     "marketPrice": "80",
@@ -3060,7 +3077,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Analgésique (Drogue)",
+    "name": "Analgésique",
     "prerequisites": "Contenant identifié* AN + liquide",
     "descriptions": "Cette drogue supprime la sensation de douleur chez le sujet et est utilisée aussi bien pour les opérations chirurgicales que comme drogue de combat. Ingérée, la drogue prend 5 minutes à agir et supprime la sensation de douleur chez le sujet pour une durée de 1 heure. Injectée, la drogue prend effet instantanément, supprime la sensation de douleur et confère 3 points de vie temporaires pour une durée de 15 minutes. Le sujet est aussi immunisé à l'effet de souffrance associé aux dégâts ''brûle'' (mais pas aux dégâts). Il doit annoncer ''Résiste'' lorsqu'il reçoit des dégâts \"brûle\".",
     "marketPrice": "100",
@@ -3077,7 +3094,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Sédatif (Drogue)",
+    "name": "Sédatif",
     "prerequisites": "Contenant identifié* SD + liquide",
     "descriptions": "Cette drogue engendre une perte de conscience similaire à un sommeil profond. À moins d'être affectée par un analgésique, la victime reprend conscience si elle subit des dégâts. Ingérée, la drogue prend 5 minutes à agir, et l'inconscience persiste pour une durée de 30 minutes, infligeant un effet ''Drogue : Inconscience  pendant 30 minutes d'ici 5 minutes''. Injectée, la drogue prend effet instantanément avec pour effet ''Drogue : Inconscience pendant 5 minutes''. Si chargée dans un aérosol ou une grenade chimique, la drogue inflige un effet ''Drogue : Inconscience pendant 5 minutes d'ici 1 minute''. Cette drogue est soluble dans l'eau.",
     "marketPrice": "200",
@@ -3094,7 +3111,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Amnésique (Drogue)",
+    "name": "Amnésique",
     "prerequisites": "Contenant identifié* AM + liquide",
     "descriptions": "Cette drogue provoque une perte de mémoire, suivie d'une période de confusion. Ingérée ou chargée dans un aérosol, la drogue provoque immédiatement un effet  ''Drogue : Oubli des 10 dernières minutes ET Confusion pendant 2 minutes''. Cette perte de mémoire efface tous les détails de la dernière scène, incluant la consommation de la drogue et le moment de confusion. En cas de doute sur les événements oubliés, veuillez consulter l'équipe d'animation. Cette drogue est soluble dans l'eau.",
     "marketPrice": "150",
@@ -3111,7 +3128,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Radiosuppresseur (Médicament)",
+    "name": "Radiosuppresseur",
     "prerequisites": "Contenant identifié* RS + pilule",
     "descriptions": "Ce médicament est nécessaire pour combattre les effets négatifs et les dommages causés par les radiations.  Il est utilisé pour traiter les conditions de type ''Radiation'', de même que d'autres effets négatifs associés à ces détériorations. Consommé préventivement, ce médicament permet également d'ignorer 1 effet ''Radiation'' pendant la prochaine heure. Cet effet n'est pas cumulable.",
     "marketPrice": "100",
@@ -3128,7 +3145,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Adrénaline (Drogue)",
+    "name": "Adrénaline",
     "prerequisites": "Contenant identifié* AD + liquide",
     "descriptions": "Cette drogue versatile est souvent utilisée sur le champ de bataille. Injectée dans une personne inconsciente, la drogue force immédiatement le sujet à se réveiller et lui restaure 1 point de vie s'il était à 0. Avec injection, cette drogue permet également à une personne consciente d'ignorer les pénalités physiques issues de ses cartes conditions pendant une durée de 15 minutes, mais augmente son agressivité.",
     "marketPrice": "60",
@@ -3145,7 +3162,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Antitoxine (Médicament)",
+    "name": "Antitoxine",
     "prerequisites": "Contenant identifié* AT + pilule",
     "descriptions": "Ce médicament est nécessaire pour combattre les effets négatifs causés par les toxines. Il est utilisé pour traiter les conditions de type ''Toxine''. Un antitoxine peut également être utilisé préventivement pour purifier un volume de liquide de 2 litres ou moins de toute toxine, poison ou drogue.",
     "marketPrice": "100",
@@ -3162,7 +3179,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Stéroïde (Drogue)",
+    "name": "Stéroïde",
     "prerequisites": "Contenant identifié* ST + liquide",
     "descriptions": "Cette drogue dangereuse augmente la force physique du sujet, mais est hautement addictive. Injectée, la drogue confère un bonus de +1 aux dégâts de mêlée pendant 15 minutes. Si plus d'une dose est consommée pendant un cycle, le sujet développe une dépendance et reçoit une condition ''Toxine : Addiction''. Si deux doses sont injectées de façon successive, la drogue confère alors additionnellement Force surhumaine, mais le sujet perd conscience pendant 5 minutes lorsque les effets se dissipent.",
     "marketPrice": "120",
@@ -3179,7 +3196,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Psychotrope (Drogue)",
+    "name": "Psychotrope",
     "prerequisites": "Contenant identifié* PT + pilule",
     "descriptions": "Cette drogue cause des hallucinations mineures et des symptômes psychologiques imprévisibles chez le sujet, mais peut se montrer addictive. Ingérée, la drogue cause des hallucinations et augmente l'émotivité du sujet pour une durée de 15 minutes. Généralement, la drogue intensifie l'état psychologique présent du sujet en plus de lui faire percevoir des couleurs, sons, odeurs et même des choses plus tangibles. Si plus de deux doses sont consommées pendant un cycle, le sujet développe une dépendance et reçoit une condition ''Psychologie : Addiction''.",
     "marketPrice": "60",
@@ -3196,7 +3213,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Anti-Grav (Médicament)",
+    "name": "Anti-Grav",
     "prerequisites": "Contenant identifié* AG + pilule",
     "descriptions": "Ce médicament est nécessaire aux Ceinturiens pour combattre les effets de la gravité sur leurs corps affaiblis, et peut également servir en cas de voyage spatial sur des astres à très haute gravité. Un Ceinturien doit consommer 1 dose d'anti-grav avant de mettre les pieds sur un astre à gravité terrestre sans quoi il subit une condition ''Santé : Dégénerescence Gravitationnelle\" causée par la force de la gravité sur son squelette et ses muscles. Ce malus est cumulable.",
     "marketPrice": "80",
@@ -3213,7 +3230,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Sérum psychoactif (Drogue)",
+    "name": "Sérum psychoactif",
     "prerequisites": "Contenant identifié* SP + liquide",
     "descriptions": "Cette drogue augmente la suggestibilité et inhibe l'esprit critique du sujet. Ingérée ou injectée, la drogue cause un état de béatitude d'une durée de 30 minutes pendant laquelle la méfiance du sujet est effacée. La drogue inflige alors un effet \"Drogue : Tu crois que tout le monde dit la vérité et que personne ne te veut du mal, 30 minutes\". Noter que cette naïveté n'empêche aucun personnage de se taire ou de garder des secrets. Utilisée en combinaison avec la compétence Tortionnaire, cette drogue permet de conduire un interrogatoire sans requérir à la violence physique, et permet de poser 2 questions supplémentaires. Cette drogue est soluble dans l'eau.",
     "marketPrice": "200",
@@ -3230,7 +3247,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Inhibiteur sensoriel  (Drogue)",
+    "name": "Inhibiteur sensoriel",
     "prerequisites": "Contenant identifié* IS + liquide",
     "descriptions": "Cette drogue inhibe les sens du consommateur pour permettre la connexion à des serveurs de réalité virtuelle (VR) pour ceux ne possédant pas d'interface cybernétique ou de connexion Extranet internalisée. Deux minutes après consommation, le sujet perd contact avec la réalité, perdant progressivement ses cinq sens pour les rendre disponibles aux stimulations numériques. Cette drogue est généralement utilisée dans un environnement controlé spécialisé pour les voyages numériques. L'inhibition sensorielle persiste jusqu'à la fin de la séance de VR. Si utilisée dans un contexte inadéquat, cette drogue cause un effet \"Drogue : Aveuglement et Surdité pendant 1 minute\", 2 minutes après ingestion. C'est drogue est soluble dans l'eau.",
     "marketPrice": "60",
@@ -3247,7 +3264,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Amphétamine (Drogue)",
+    "name": "Amphétamine",
     "prerequisites": "Contenant identifié* AA + pilule",
     "descriptions": "Cette drogue stimulante maintient son utilisateur dans un état d'éveil et de réactivité accrue. Ingérée, cette drogue permet à une personne d'ignorer tous les effets issus d'une carte condition qui viendraient nuire ou bloquer l'usage de certaines compétences. Une dose fait effet pendant 1 heure.  De plus, l'amphétamine immunise le sujet à toute perte de conscience (assommé, sommeil, évanouissement) exception faite de celle survenant en tombant à 0 PV. Le joueur doit signaler ''Résiste'' s'il évite ainsi un effet d'inconscience. Si plus d'une dose est consommée pendant un cycle, le sujet développe une dépendance et reçoit une condition ''Toxine : Addiction''.",
     "marketPrice": "80",
@@ -3264,7 +3281,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Antipsychotique (Médicament)",
+    "name": "Antipsychotique",
     "prerequisites": "Contenant identifié* AP + pilule",
     "descriptions": "Ce médicament est nécessaire pour combattre des maladies et affections d'origine psychiatrique. Il est utilisé pour traiter plusieurs conditions de type ''Psychologie''.",
     "marketPrice": "100",
@@ -3281,7 +3298,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Nootrope (Drogue)",
+    "name": "Nootrope",
     "prerequisites": "Contenant identifié* NO + pilule",
     "descriptions": "Cette drogue de performance aiguise les facultés mentales et la capacité de concentration du sujet. Sous l'influence de cette drogue, tous les temps de fabrication et de réparation des équipements conçus par le sujet sont réduits de 5 minutes (minimum 5 min.). De plus, le sujet réussit automatiquement toutes les tentatives de rétro-ingénierie auquel il participe (100% de chance de succès, même seul). Finalement, le sujet peut collecter 1 ressource supplémentaire en recyclant un objet via le système de récupération. Les effets du nootrope perdurent pour 1 heure après ingestion. Si plus d'une dose est consommée pendant un cycle, le sujet développe une dépendance et reçoit une condition ''Psychologie : Addiction''.",
     "marketPrice": "120",
@@ -3298,12 +3315,12 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Zopad (Drogue)",
+    "name": "Zopad",
     "prerequisites": "Contenant identifié* ZO + liquide",
     "descriptions": "Cette drogue de performance extrêmement volatile et addictive aiguise les réflexes des pilotes et suscite une forme de transe chez le consommateur. Sous l’influence de cette drogue, le sujet augmente à 80% ses chances de succès sur tout jet de manœuvre et ne peut jamais subir d’échec critique. De plus, s’il effectue des manœuvres d’évasion lors d’un combat spatial, le pilote peut forcer le prochain missile à le cibler au prochain tour à réussir un jet pour l’atteindre. Une dose de Zopad est injectée à partir du siège du pilote et dure pendant 10 tours du système de pilotage, ou la totalité d’une scène narrative. Après une utilisation, le sujet contracte automatiquement une condition “Psychologie : Addiction” et une condition ''Blessure : Commotion cérébrale''.",
     "marketPrice": "225",
     "costToCraftInCredit": "",
-    "ressourcesNeeded": "Adrénaline, Psychotrope, Biomasse",
+    "ressourcesNeeded": "Adrénaline + Psychotrope + Biomasse",
     "craftTimeInMinutes": "",
     "craftTimeInDowntime": "",
     "maxPerDowntime": "",
@@ -3321,9 +3338,9 @@
     "marketPrice": "50",
     "costToCraftInCredit": "30",
     "ressourcesNeeded": "",
-    "craftTimeInMinutes": "5",
-    "craftTimeInDowntime": "1",
-    "maxPerDowntime": "3",
+    "craftTimeInMinutes": "5.0",
+    "craftTimeInDowntime": "1.0",
+    "maxPerDowntime": "3.0",
     "location": "",
     "malfunction": "",
     "salary": "",
@@ -3439,7 +3456,7 @@
     "descriptions": "Un analyste financier est une IA capable de procéder à des placements rentables sur le marché en prenant des décisions financières de haute précision et en analysant les données économiques pour le compte de son propriétaire pour optimiser ses placements. Après l'activation d'un analyste financier, son propriétaire gagne passivement une plus value de 5% sur le contenu de son compte bancaire entre chaque événement (calculé après dépenses de Downtime et avant toute entrée salariale). Si le propriétaire d'un analyste financier travaille pour le Groupe Insta-Vie, il peut effectuer des placements spéculatifs pour obtenir une plus value de 10%. Les gains financiers sont accumulés dans un compte secondaire. Retirer des fonds de ce compte requiert 1 action de Downtime.",
     "marketPrice": "750",
     "costToCraftInCredit": "20",
-    "ressourcesNeeded": "IA + Analyseur de paquet",
+    "ressourcesNeeded": "IA + Analyseur de paquets",
     "craftTimeInMinutes": "20",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",
@@ -3592,7 +3609,7 @@
     "descriptions": "Retire un pare-feu actif, au hasard, à une cible. Activation instantanée lors de l'utilisation de Piratage simple. Utilisable seulement par un personnage ayant les compétences Cryptographie et Piratage simple.",
     "marketPrice": "175",
     "costToCraftInCredit": "20",
-    "ressourcesNeeded": "Clé Universelle Simple, Logiciel",
+    "ressourcesNeeded": "Clé Universelle Simple + Logiciel",
     "craftTimeInMinutes": "10",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "3",
@@ -3864,7 +3881,7 @@
     "descriptions": "Activé sur une cible, la prochaine tentative de piratage qui cible son compte bancaire ou sa personne (androïde, cyborg) échoue, déclenche une alerte envoyée à une personne de son choix et cette alerte contient l'identité du pirate. Ce pare-feu ne peut pas être choisi comme pare-feu pour la compétence Cryptographie. Le pare-feu demeure actif pour toute la durée de l'événement. Ce programme ne peut être cumulé. (Veuillez aviser l'équipe d'animation quand vous activez ce pare-feu). Utilisable seulement par un personnage ayant la compétence Cryptographie.",
     "marketPrice": "400",
     "costToCraftInCredit": "60",
-    "ressourcesNeeded": "Analyseur de paquets, Logiciel (2)",
+    "ressourcesNeeded": "Analyseur de paquets + Logiciel (2)",
     "craftTimeInMinutes": "20",
     "craftTimeInDowntime": "1",
     "maxPerDowntime": "1",

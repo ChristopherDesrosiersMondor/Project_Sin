@@ -96,10 +96,10 @@ async function seedDatabase() {
                     parseFloat(item.costToCraftInCredit) || null,
                     parseInt(item.craftTimeInMinutes) || null,
                     parseInt(item.craftTimeInDowntime) || null,
-                    item.maxPerDowntime ? parseInt(item.maxPerDowntime) : null,
+                    parseInt(item.maxPerDowntime) || null,
                     item.location,
                     item.malfunction,
-                    item.salary ? parseInt(item.salary) : null,
+                    parseInt(item.salary) || null,
                     item.propDescription,
                     item.skillNeeded,
                     item.category

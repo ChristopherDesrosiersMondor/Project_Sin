@@ -1,0 +1,17 @@
+export interface itemModel {
+    id: string,
+    name: string,
+    prerequisites: string,
+    descriptions: string,
+    market_price: string,
+    cost_to_craft_in_credit: string,
+    craft_time_in_minutes: string,
+    craft_time_in_downtime: string,
+    max_per_downtime: string,
+    location: string,
+    malfunction: string,
+    salary: string,
+    prop_description: string,
+    skill_needed: string,
+    category: string,
+}

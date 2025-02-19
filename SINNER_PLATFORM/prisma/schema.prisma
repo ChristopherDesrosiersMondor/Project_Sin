@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model item_components {
+  id                                             Int    @id @default(autoincrement())
+  item_id                                        Int?
+  component_item_id                              Int?
+  quantity                                       Int?
+  items_item_components_component_item_idToitems items? @relation("item_components_component_item_idToitems", fields: [component_item_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  items_item_components_item_idToitems           items? @relation("item_components_item_idToitems", fields: [item_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@unique([item_id, component_item_id])
+}
+
+model items {
+  id                                                       Int               @id @default(autoincrement())
+  name                                                     String            @unique @db.VarChar(255)
+  prerequisites                                            String?
+  descriptions                                             String?
+  market_price                                             Decimal?          @db.Decimal
+  cost_to_craft_in_credit                                  Decimal?          @db.Decimal
+  craft_time_in_minutes                                    Int?
+  craft_time_in_downtime                                   Int?
+  max_per_downtime                                         Int?
+  location                                                 String?
+  malfunction                                              String?
+  salary                                                   Int?
+  prop_description                                         String?
+  skill_needed                                             String?
+  category                                                 String?           @db.VarChar(100)
+  item_components_item_components_component_item_idToitems item_components[] @relation("item_components_component_item_idToitems")
+  item_components_item_components_item_idToitems           item_components[] @relation("item_components_item_idToitems")
+}

@@ -35,6 +35,7 @@
 					<p>Time: {componentNeeded.totalTimeInMinutes} minutes</p>
 					<p>Downtime: {componentNeeded.totalTimeInDowntime}</p>
 					<p>Max per downtime: {item.max_per_downtime}</p>
+					<p>Debug: {componentNeeded.debug}</p>
 				</div>
 			</div>
 		</div>

@@ -33,12 +33,16 @@
 
 <div class="terminal-container">
 	<!-- Letter navigation -->
-	<div class="flex flex-wrap gap-5 mb-6">
-		{#each letters as letter}
-			<a href="#{letter}" class="terminal-link letter-nav px-3 py-2 text-center">
-				{letter}
-			</a>
-		{/each}
+	<!-- svelte-ignore a11y_consider_explicit_label -->
+	<a id="top"></a>
+	<div class="center-div">
+		<div class="custom-grid mb-6">
+			{#each letters as letter}
+				<a href="#{letter}" class="terminal-link letter-link letter-nav px-3 py-2 text-center">
+					{letter}
+				</a>
+			{/each}
+		</div>
 	</div>
 
 	<!-- Sections for each letter -->
@@ -61,6 +65,16 @@
 			{/if}
 		{/each}
 	</div>
+
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+		<button class="fixed-button">
+			<a
+				href="#top"
+				class="terminal-link p-4 border border-[#33ff33] hover:bg-[#33ff33] hover:text-[#0a0a0a]"
+				>TOP</a
+			>
+		</button>
+	</div>
 </div>
 
 <style>
@@ -70,10 +84,41 @@
 		font-family: 'Courier New', Courier, monospace;
 	}
 
+	.center-div {
+		width: 500px;
+		margin: 0 auto;
+		padding: 20px; /* Optional padding */
+		/* background-color: lightblue; */
+	}
+
+	.letter-link {
+		width: 30px;
+		text-align: center;
+	}
+
+	.custom-grid {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 1rem; /* Adjust spacing as needed */
+		width: 400px;
+		margin: 0 auto;
+		padding-bottom: 30px;
+		/* background-color: rgb(5, 18, 22); */
+	}
+
 	.terminal-container {
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 2rem;
+		grid-template-columns: repeat(5, 1fr);
+	}
+
+	.fixed-button {
+		position: fixed; /* Makes the button stay fixed in place */
+		bottom: 20px; /* Adjust distance from the bottom of the page */
+		right: 20px; /* Adjust distance from the right of the page */
+		padding: 10px 20px; /* Adds padding inside the button */
+		background-color: #0a0a0a;
 	}
 
 	.terminal-section {
@@ -91,10 +136,8 @@
 	}
 
 	.terminal-link:hover {
-		background-color: #33ff33;
 		color: #577a3b;
 		text-shadow: none;
-		box-shadow: 0 0 15px rgba(51, 255, 51, 0.4);
 	}
 
 	.letter-nav {

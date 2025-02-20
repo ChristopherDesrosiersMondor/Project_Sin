@@ -2,8 +2,22 @@ import { Decimal } from '@prisma/client/runtime/library'
 import { prisma } from '$lib/server/prisma';
 
 export interface CraftingStep {
+    stepComponentName: string
     stepNumber: number
+    cost: string
+    timeInMinutes: number
+    timeInDowntime: number
     components: {
+        itemName: string
+        quantity: number
+    }[]
+}
+
+export interface CraftingStepIntermediary {
+    cost: Decimal
+    timeInMinutes: number
+    timeInDowntime: number
+    baseComponents: {
         itemName: string
         quantity: number
     }[]
@@ -21,109 +35,130 @@ export interface CraftingResult {
         timeInMinutes: number
         timeInDowntime: number
     }[]
+    debug: string
 }
 
 export async function calculateCraftingRequirements(itemId: number): Promise<CraftingResult> {
-    const item = await prisma.items.findUnique({
-        where: { id: itemId },
-        include: {
-            item_components_item_components_item_idToitems: {
-                include: {
-                    items_item_components_component_item_idToitems: {
-                        include: {
-                            item_components_item_components_item_idToitems: true
-                        }
-                    }
-                }
-            }
-        }
-    })
-
-    if (!item) {
-        throw new Error('Item not found')
-    }
-
-    let runningTotalCost = new Decimal(0)
     const result: CraftingResult = {
         totalCost: '0',
         totalTimeInMinutes: 0,
         totalTimeInDowntime: 0,
         steps: [],
-        breakdown: []
+        breakdown: [],
+        debug: ''
     }
 
-    // Function to collect components for a specific step
-    async function collectComponentsForStep(
-        components: typeof item.item_components_item_components_item_idToitems,
-        stepNumber: number
-    ) {
-        const stepComponents = components.map((component: { items_item_components_component_item_idToitems: { name: any; }; quantity: any; }) => ({
-            itemName: component.items_item_components_component_item_idToitems?.name || 'Unknown',
-            quantity: component.quantity || 0
-        }))
+    // Map to track processed items and prevent infinite loops
+    const processedItems = new Map<number, boolean>()
 
-        if (stepComponents.length > 0) {
-            result.steps.push({
-                stepNumber,
-                components: stepComponents
-            })
-
-            // Recursively check if these components have their own components
-            for (const component of components) {
-                const subComponents = component.items_item_components_component_item_idToitems
-                    ?.item_components_item_components_item_idToitems
-                if (subComponents && subComponents.length > 0) {
-                    await collectComponentsForStep(subComponents, stepNumber + 1)
+    async function processItem(itemId: number, multiplier: number = 1): Promise<CraftingStepIntermediary> {
+        const item = await prisma.items.findUnique({
+            where: { id: itemId },
+            include: {
+                item_components_item_components_item_idToitems: {
+                    include: {
+                        items_item_components_component_item_idToitems: true
+                    }
                 }
             }
+        })
+
+        if (!item) {
+            result.debug += `Unknown item: ${itemId}; `
+            return {
+                cost: new Decimal(0),
+                timeInMinutes: 0,
+                timeInDowntime: 0,
+                baseComponents: []
+            }
         }
-    }
 
-    // Start collecting components from step 1
-    await collectComponentsForStep(item.item_components_item_components_item_idToitems, 1)
+        // Check if we've already processed this item
+        if (processedItems.get(itemId)) {
+            return {
+                cost: new Decimal(item.cost_to_craft_in_credit || 0),
+                timeInMinutes: item.craft_time_in_minutes || 0,
+                timeInDowntime: item.craft_time_in_downtime || 0,
+                baseComponents: []
+            }
+        }
 
-    // Calculate costs and times (keeping the original breakdown logic)
-    if (item.cost_to_craft_in_credit) {
-        runningTotalCost = runningTotalCost.plus(item.cost_to_craft_in_credit)
-    }
-    if (item.craft_time_in_minutes) {
-        result.totalTimeInMinutes += item.craft_time_in_minutes
-    }
-    if (item.craft_time_in_downtime) {
-        result.totalTimeInDowntime += item.craft_time_in_downtime
-    }
+        processedItems.set(itemId, true)
 
-    result.breakdown.push({
-        itemName: item.name,
-        quantity: 1,
-        cost: (item.cost_to_craft_in_credit || new Decimal(0)).toString(),
-        timeInMinutes: item.craft_time_in_minutes || 0,
-        timeInDowntime: item.craft_time_in_downtime || 0
-    })
+        let stepCost = new Decimal(item.cost_to_craft_in_credit || 0)
+        let stepComponentName = item.name
+        let stepTimeInMinutes = item.craft_time_in_minutes || 0
+        let stepTimeInDowntime = item.craft_time_in_downtime || 0
+        let currentStepComponents = []
+        let baseComponents = []
 
-    // Process component costs and times
-    for (const component of item.item_components_item_components_item_idToitems) {
-        const componentItem = component.items_item_components_component_item_idToitems
-        if (componentItem && component.quantity) {
-            const componentRequirements = await calculateCraftingRequirements(componentItem.id)
+        for (const component of item.item_components_item_components_item_idToitems) {
+            const componentItem = component.items_item_components_component_item_idToitems
+            if (!componentItem) {
+                result.debug += `Unknown component for item ${itemId}; `
+                continue
+            }
 
-            const componentCost = new Decimal(componentRequirements.totalCost).mul(component.quantity)
-            runningTotalCost = runningTotalCost.plus(componentCost)
+            const quantity = component.quantity || 0
+            const subResult = await processItem(componentItem.id, quantity * multiplier)
 
-            result.totalTimeInMinutes += componentRequirements.totalTimeInMinutes * component.quantity
-            result.totalTimeInDowntime += componentRequirements.totalTimeInDowntime * component.quantity
+            stepCost = stepCost.plus(subResult.cost.mul(quantity))
+            stepTimeInMinutes += subResult.timeInMinutes * quantity
+            stepTimeInDowntime += subResult.timeInDowntime * quantity
 
-            result.breakdown.push({
-                itemName: componentItem.name,
-                quantity: component.quantity,
-                cost: componentCost.toString(),
-                timeInMinutes: componentRequirements.totalTimeInMinutes * component.quantity,
-                timeInDowntime: componentRequirements.totalTimeInDowntime * component.quantity
+            if (subResult.baseComponents.length > 0) {
+                // If component has subcomponents, add them to base components
+                baseComponents.push(...subResult.baseComponents)
+            } else {
+                // If no subcomponents, this is a base component
+                currentStepComponents.push({
+                    itemName: componentItem.name,
+                    quantity: quantity * multiplier
+                })
+                baseComponents.push({
+                    itemName: componentItem.name,
+                    quantity: quantity * multiplier
+                })
+            }
+        }
+
+        // Only create a step if there are components at this level
+        if (currentStepComponents.length > 0) {
+            result.steps.push({
+                stepComponentName: stepComponentName,
+                stepNumber: result.steps.length + 1,
+                cost: stepCost.toString(),
+                timeInMinutes: stepTimeInMinutes,
+                timeInDowntime: stepTimeInDowntime,
+                components: currentStepComponents
             })
         }
+
+        return {
+            cost: stepCost,
+            timeInMinutes: stepTimeInMinutes,
+            timeInDowntime: stepTimeInDowntime,
+            baseComponents
+        }
     }
 
-    result.totalCost = runningTotalCost.toString()
+    const finalResult = await processItem(itemId)
+
+    result.totalCost = finalResult.cost.toString()
+    result.totalTimeInMinutes = finalResult.timeInMinutes
+    result.totalTimeInDowntime = finalResult.timeInDowntime
+
+    // Add the main item to the breakdown
+    const mainItem = await prisma.items.findUnique({ where: { id: itemId } })
+    if (mainItem) {
+        result.breakdown.push({
+            itemName: mainItem.name,
+            quantity: 1,
+            cost: finalResult.cost.toString(),
+            timeInMinutes: finalResult.timeInMinutes,
+            timeInDowntime: finalResult.timeInDowntime
+        })
+    }
 
     return result
 }

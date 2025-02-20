@@ -12,8 +12,6 @@
 	<div class="space-y-8">
 		<ItemDetails {item} />
 
-		{componentNeeded.totalCost}
-
 		<div class="bg-white rounded-lg shadow-sm p-6">
 			<h2 class="text-xl font-bold mb-4">Crafting Requirements</h2>
 
@@ -21,7 +19,7 @@
 				{#if componentNeeded.steps.length > 0}
 					{#each componentNeeded.steps as step}
 						<div class="step">
-							<h3 class="font-semibold mb-2">Step {step.stepNumber}</h3>
+							<h3 class="font-semibold mb-2">Step {step.stepNumber} ({step.stepComponentName})</h3>
 							<ul class="list-disc list-inside space-y-1">
 								{#each step.components as component}
 									<li>{component.itemName} (x{component.quantity})</li>

@@ -76,6 +76,13 @@
 				{item.category}
 			</div>
 		{/if}
+
+		{#if item.category}
+			<div class="field-group">
+				Salary:
+				{item.salary}
+			</div>
+		{/if}
 	</div>
 </div>
 

@@ -6,7 +6,7 @@
 	$: ({ items } = data);
 
 	// Create array of letters A-Z with type
-	const letters: string[] = Array.from('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+	const letters: string[] = Array.from('ABCDEÉFGHIJKLMNOPQRSTUVWXYZ');
 
 	// Type for the grouped items
 	type ItemsByLetter = {

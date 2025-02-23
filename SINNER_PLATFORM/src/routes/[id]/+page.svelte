@@ -19,10 +19,15 @@
 				{#if componentNeeded.steps.length > 0}
 					{#each componentNeeded.steps as step}
 						<div class="step">
-							<h3 class="font-semibold mb-2">Step {step.stepNumber} ({step.stepComponentName})</h3>
+							<h3 class="font-semibold mb-2">
+								Step {step.stepNumber} ({step.stepComponentName}) (time: {step.stepComponentTime})
+								(cost: {step.stepComponentCost})
+							</h3>
 							<ul class="list-disc list-inside space-y-1">
 								{#each step.components as component}
-									<li>{component.itemName} (x{component.quantity})</li>
+									<li>
+										{component.itemName} (x{component.quantity}) (time: {component.time}) (cost: {component.cost})
+									</li>
 								{/each}
 							</ul>
 						</div>

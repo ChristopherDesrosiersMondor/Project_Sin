@@ -7,9 +7,13 @@ export interface CraftingStep {
     cost: string
     timeInMinutes: number
     timeInDowntime: number
+    stepComponentTime: string
+    stepComponentCost: string
     components: {
-        itemName: string
-        quantity: number
+        itemName: string,
+        quantity: number,
+        cost: string,
+        time: string
     }[]
 }
 
@@ -113,7 +117,9 @@ export async function calculateCraftingRequirements(itemId: number): Promise<Cra
                 // If no subcomponents, this is a base component
                 currentStepComponents.push({
                     itemName: componentItem.name,
-                    quantity: quantity * multiplier
+                    quantity: quantity * multiplier,
+                    time: componentItem.craft_time_in_minutes?.toString(),
+                    cost: componentItem.cost_to_craft_in_credit?.toString()
                 })
                 baseComponents.push({
                     itemName: componentItem.name,
@@ -127,6 +133,8 @@ export async function calculateCraftingRequirements(itemId: number): Promise<Cra
             result.steps.push({
                 stepComponentName: stepComponentName,
                 stepNumber: result.steps.length + 1,
+                stepComponentCost: item.cost_to_craft_in_credit?.toString(),
+                stepComponentTime: item.craft_time_in_minutes?.toString(),
                 cost: stepCost.toString(),
                 timeInMinutes: stepTimeInMinutes,
                 timeInDowntime: stepTimeInDowntime,

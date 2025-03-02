@@ -901,7 +901,7 @@
     "category": "Bioingénierie"
   },
   {
-    "name": "Culture bactérienne (Maladie)",
+    "name": "Culture bactérienne",
     "prerequisites": "Contenant identifié CBA + liquide jaune",
     "descriptions": "Une culture bactérienne est une composante de base en bioscience qui peut également servir à causer une infection mineure si ingérée ou injectée à la victime par un Secouriste. Elle cause alors un effet ''Maladie : Migraine et nausée pendant 1 heure''. Cette culture est soluble dans l'eau.",
     "marketPrice": "90",
@@ -918,7 +918,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Culture virale (Maladie)",
+    "name": "Culture virale",
     "prerequisites": "Contenant identifié VIR + liquide transparent",
     "descriptions": "Une culture virale est une composante de base en bioscience qui peut également servir à causer une infection mineure si ingérée ou injectée à la victime par un Secouriste. Elle cause alors un effet ''Maladie : Toux et éternuement pendant 1 heure''. Cette culture est soluble dans l'eau.",
     "marketPrice": "90",
@@ -986,7 +986,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Neurotoxine (Toxine)",
+    "name": "Neurotoxine",
     "prerequisites": "Contenant identifié NEU + liquide bleu",
     "descriptions": "Cette toxine paralyse les muscles de la victime au contact, causant des engourdissements localisés, voire une paralysie complète si administrée par intraveineuse. Appliquée sur un linge ou une arme de mêlée, cette toxine inflige au contact un effet ''Toxine: Paralysie: Tu ne peux pas utiliser ton membre pour 5 minutes''. Alternativement, la toxine peut être injectée par un Secouriste avec une seringue pour un effet ''Toxine : Paralysie totale : 5 minutes''. La toxine doit être utilisée dans la prochaine heure après avoir été appliquée.",
     "marketPrice": "200",
@@ -1003,7 +1003,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Phototoxine  (Toxine)",
+    "name": "Phototoxine",
     "prerequisites": "Contenant identifié PHO + liquide jaune",
     "descriptions": "Cette toxine attaque les réflexes oculaires de la victime et la rend extrêmement facile à éblouir. Injectée par un Secouriste ou appliquée sur une arme de mêlée, elle cause une condition ''Toxine : Neurotoxine'' et un effet instantané de ''Toxine : Aveuglement, 1 minute''. Après l'aveuglement initial, la victime se verra incapable de regarder directement une source lumineuse ou de lever les yeux du sol par une journée ensoleillée. La toxine doit être utilisée dans la prochaine heure après avoir été appliquée.",
     "marketPrice": "200",
@@ -1020,7 +1020,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Vecteur Viral (Maladie)",
+    "name": "Vecteur Viral",
     "prerequisites": "Contenant identifié VV + liquide violet",
     "descriptions": "Ce virus en apparence bénin est capable d'altérer de façon significative l'ADN de sa victime. Injecté par un secouriste ou ingéré, un vecteur viral altère l'ADN de la cible, causant une condition ''Maladie : Altération génétique''. Une telle maladie modifie la signature génétique du sujet, qui n'est alors plus reconnu par les sécurités biométriques ou les tests génétiques. Si la cible possède des augmentations biologiques, des complications médicales supplémentaires peuvent rapidement subvenir, comme des cancers, des rejets, des réactions allergiques ou elle peut même être détectée comme une Chimère aux yeux de la loi. Cette culture virale est soluble dans l'eau.",
     "marketPrice": "200",
@@ -1037,7 +1037,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Agro Virus (Maladie)",
+    "name": "Agro Virus",
     "prerequisites": "Contenant identifié AGR + liquide rouge",
     "descriptions": "Ce virus stimule les comportements d'agression et inhibe simultanément les réflexes d'auto-préservation et de contrôle de soi chez la victime. Si blessée en combat, victime perdra automatiquement le contrôle pour attaquer toute cible à proximité. Appliquée sur un linge au contact ou ingérée, la cible reçoit une condition ''Maladie : Agro Virus''. Le virus doit être utilisé dans la prochaine heure après avoir été appliqué. Cette culture virale est soluble dans l'eau.",
     "marketPrice": "250",
@@ -1054,7 +1054,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Hémorragique (Toxine)",
+    "name": "Hémorragique",
     "prerequisites": "Contenant identifié HEM + liquide rouge",
     "descriptions": "Cette toxine éclaircit drastiquement le sang de la victime, causant des saignements significatifs même en cas de blessures mineures. Si injectée par un Secouriste ou appliquée sur une arme de mêlée, cette toxine cause une Condition ''Toxine : Hémorragique''. La toxine doit être utilisée dans la prochaine heure après avoir été appliquée.",
     "marketPrice": "250",
@@ -1071,7 +1071,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Histamine (Toxine)",
+    "name": "Histamine",
     "prerequisites": "Contenant identifié HIS + liquide jaune",
     "descriptions": "Cette toxine cause une réaction allergique extrême et potentiellement mortelle si ingérée ou injectée par un Secouriste. La cible est alors affectée par une condition ''Toxine : Réaction allergique''. Cette toxine est soluble dans l'eau.",
     "marketPrice": "250",
@@ -1088,7 +1088,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Pandemia (Maladie)",
+    "name": "Pandemia",
     "prerequisites": "Contenant identifiée CON + liquide orange",
     "descriptions": "Cette souche virale bénigne est extrêmement tenace et contagieuse. Conçue pour ravager des populations vulnérables ou affaiblir la résistance immunitaire d'une région donnée, il s'agit d'une maladie qui se propage par simple contact ou proximité. Si une culture Pandemia est ouverte après sa création, elle sera inhalée par toutes les personnes à moins de 1 mètre, les infectant avec une condition ''Maladie : Pandémie''. Les effets de cette maladie se limitent à une fièvre légère, une toux et des éternuements. Tous les infectés transmettent la condition au contact ou s'ils demeurent à moins de 1 mètre d'une cible pendant plus de 5 minutes.",
     "marketPrice": "250",
@@ -1122,7 +1122,7 @@
     "category": "Biotechnologie"
   },
   {
-    "name": "Streptocoque N (Maladie)",
+    "name": "Streptocoque N",
     "prerequisites": "Contenant identifié STR + liquide noir",
     "descriptions": "Cette bactérie est une version militarisée de la bactérie mangeuse de chair. Appliquée sur un linge ou une arme de mêlée, cette culture cause au contact une condition '' Maladie : Streptocoque N''. Cette infection s'aggrave rapidement et cause aléatoirement des conditions ''Maladie : Infection mineure'' et ''Blessure : Nécrose'' à chaque 2 heures.",
     "marketPrice": "300",
@@ -1157,6 +1157,23 @@
   },
   {
     "name": "Biomasse-fille (type commun)",
+    "prerequisites": "voir sous-système, cylindre avec papier \"<NNN> biomasse-filles <type>\"",
+    "descriptions": "Les types communs sont : animal, végétal, fongique, procaryote. Une biomasse fille est un amas organique pouvant servir à la conception de divers produits pharmaceutiques et biotechnologiques, de même que nourrir une biomasse-mère du type adéquat.",
+    "marketPrice": "50",
+    "costToCraftInCredit": "",
+    "ressourcesNeeded": "voir sous-système",
+    "craftTimeInMinutes": "",
+    "craftTimeInDowntime": "",
+    "maxPerDowntime": "",
+    "location": "",
+    "malfunction": "",
+    "salary": "",
+    "propDescription": "",
+    "skillNeeded": "",
+    "category": "Biotechnologie"
+  },
+  {
+    "name": "Biomasse",
     "prerequisites": "voir sous-système, cylindre avec papier \"<NNN> biomasse-filles <type>\"",
     "descriptions": "Les types communs sont : animal, végétal, fongique, procaryote. Une biomasse fille est un amas organique pouvant servir à la conception de divers produits pharmaceutiques et biotechnologiques, de même que nourrir une biomasse-mère du type adéquat.",
     "marketPrice": "50",
@@ -3230,7 +3247,7 @@
     "category": "Pharmacologie"
   },
   {
-    "name": "Sérum psychoactif",
+    "name": "Serum psychoactif",
     "prerequisites": "Contenant identifié* SP + liquide",
     "descriptions": "Cette drogue augmente la suggestibilité et inhibe l'esprit critique du sujet. Ingérée ou injectée, la drogue cause un état de béatitude d'une durée de 30 minutes pendant laquelle la méfiance du sujet est effacée. La drogue inflige alors un effet \"Drogue : Tu crois que tout le monde dit la vérité et que personne ne te veut du mal, 30 minutes\". Noter que cette naïveté n'empêche aucun personnage de se taire ou de garder des secrets. Utilisée en combinaison avec la compétence Tortionnaire, cette drogue permet de conduire un interrogatoire sans requérir à la violence physique, et permet de poser 2 questions supplémentaires. Cette drogue est soluble dans l'eau.",
     "marketPrice": "200",

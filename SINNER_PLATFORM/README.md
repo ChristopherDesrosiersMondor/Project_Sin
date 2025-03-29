@@ -143,3 +143,5 @@ SELECT id from items where name = 'Secrétaire'
 
 Deploy to local
 https://www.ryanfiller.com/blog/tips/sveltekit-local-network
+
+npm run dev -- --host --port 3333
